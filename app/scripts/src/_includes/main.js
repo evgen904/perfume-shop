@@ -23,7 +23,7 @@ $(function(){
     var thumbProd = $('.js-clone-thumb').clone();
     var nameProd = $('.js-clone-name-prod').clone();
 
-    $('.js-m-top-add').prepend('<ul class="item-vendor"><li><a href="#">Бренды</a></li></ul>').prepend(menuTop);
+    $('.js-m-top-add').prepend(menuTop);
     $('.js-cont-append').append(mailClone);
     $('.js-append-soc').next().append(socialClone);
     $('.js-append-thumb').append(thumbProd);
@@ -56,6 +56,7 @@ $(function(){
         if (!$(this).hasClass('active')) {
             $(this).addClass('active'); 
             $('.menu-burger').addClass('active');
+            $('.js-select-vendor').removeClass('active');
         } else {
             $(this).removeClass('active'); 
             $('.menu-burger').removeClass('active');
@@ -67,7 +68,7 @@ $(function(){
 
 
 
-    $(document).on('click','.item-vendor a',function(event){
+    $(document).on('click','.js-btn-vendor',function(event){
         event.preventDefault();
         $('.js-select-vendor').addClass('active');
     });
@@ -107,6 +108,7 @@ $(function(){
             $(this).parent('.search').addClass('active');
         } else {
             $(this).parent('.search').removeClass('active');
+            $('.js-select-vendor').removeClass('active');
         }
     });
 
