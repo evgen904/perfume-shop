@@ -1,5 +1,20 @@
 $(function(){
 
+
+
+
+    $(document).scroll(function(){
+        var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrolled >= 200) {
+            $('body').addClass('fixed');
+        } else {
+            $('body').removeClass('fixed');
+        }
+    });
+
+
+
+
     s3Animator.once = true;
 
     var menuTop = $('.js-m-top-clone').clone();
@@ -190,7 +205,7 @@ $(function(){
                 items:1
             },
             960:{
-                items:3
+                items:2
             },
             1200:{
                 items:3

@@ -49,17 +49,78 @@
                             <img src="images/ico-tel.png" alt=""> 8 (499) 500-38-89
                         </a>
                     </div>
-                    <div class="cart-top">
+                    <div class="cart-top no-product">
                         <div class="cart-top-amount">
                             <span>4</span>
                         </div>
                         <div class="cart-top-sum">
-                            16990 <span>₽</span>
-                        </div>
+                            <a href="#">16990 <span>₽</span></a>
+                        </div>                     
                     </div>
                 </div>
             </div>            
         </header>
+
+        <div class="site-header fix-top">
+            <div class="site-header-in site-inner">
+                <div class="site-header-in-left">
+                    <a href="#">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="site-header-in-cen">
+                    <div class="menu-burger">
+                        <div class="menu-burger-title js-menu-popup">
+                            <div class="ico-burger"></div>
+                            <div class="menu-burger-text">Меню</div>
+                        </div>
+                        <div class="menu-burger-body js-m-top-add">
+                            <div class="menu-burger-body-bg-mob"></div>
+                            <div class="menu-burger-body-close js-menu-popup-close"></div>
+                            <ul>
+                                <li><a href="#">О нас</a></li>
+                                <li><a href="#">Сотрудничество </a></li>
+                                <li><a href="#">Где купить?</a></li>
+                                <li><a href="#">Доставка  </a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="menu-top js-m-top-clone">
+                        <li><a href="#">ПАРФЮМЕРИЯ</a></li>
+                        <li><a href="#">ЖЕНСКИЕ АРОМАТЫ</a></li>
+                        <li><a href="#">МУЖСКИЕ АРОМАТЫ</a></li>
+                        <li><a href="#">УНИСЕКС</a></li>
+                    </ul>
+                </div>
+                <div class="site-header-in-right">
+                    <div class="phone-top">
+                        <a href="tel:84995003889">
+                            <img src="images/ico-tel.png" alt=""> 8 (499) 500-38-89
+                        </a>
+                    </div>
+                    <div class="cart-top no-product">
+                        <a href="#">
+                            <div class="cart-top-amount">
+                                <span>4</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="authorization-link">
+                        <a href="#"></a>
+                    </div>
+                    <div class="search">
+                        <form action="/search">
+                            <button type="submit"></button>
+                            <input type="text" name="search" placeholder="Поиск по сайту...">
+                        </form>
+                        <div class="search-open js-search-btn"></div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+
+
         <div class="select-vendor site-inner js-select-vendor">
             <div class="select-vendor-left">
                 <div class="select-vendor-left-name">
@@ -451,7 +512,7 @@
         <div class="slider-head no-slide">
             <ul class="slider-head-in owl-carousel">
                 <li>
-                    <div class="slider-head-in2 site">
+                    <div class="slider-head-in2" style="background: url('images/img-main.jpg') 50% 0 no-repeat; background-size: cover;">
                         <img src="images/img-main.jpg" alt="">
                         <div class="slider-head-text">
                             <div class="site-inner">
@@ -475,7 +536,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="slider-head-in2">
+                    <div class="slider-head-in2" style="background: url('images/img-slider-2.jpg') 50% 0 no-repeat; background-size: cover;">
                         <img src="images/img-slider-2.JPG" alt="">
                         <div class="slider-head-text">
                             <div class="site-inner">
@@ -499,7 +560,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="slider-head-in2">
+                    <div class="slider-head-in2" style="background: url('images/img-slider-3.jpg') 50% 0 no-repeat; background-size: cover;">
                         <img src="images/img-slider-3.JPG" alt="">
                         <div class="slider-head-text">
                             <div class="site-inner">
@@ -1108,7 +1169,7 @@
             </div>
         </div>
         <div class="block-about site-inner">
-            <div class="block-about-title js-about">
+            <div class="block-about-title">
                 Номерная парфюмерия Nadin
             </div>
             <div class="block-about-body">
@@ -1125,45 +1186,53 @@
                     <div class="block-working-img">
                         <img src="images/working-ico-1.png" alt="">
                     </div>
-                    <div class="block-working-name">
-                        Оформить заявку
-                    </div>
-                    <div class="block-working-note">
-                        Вы оформляете заявку на сайте <br>или просто звоните нам
-                    </div>
+                    <div class="block-working-desc">
+                        <div class="block-working-desc-name">
+                            Оформить заявку
+                        </div>
+                        <div class="block-working-desc-note">
+                            Вы оформляете заявку на сайте <br>или просто звоните нам
+                        </div>
+                    </div>                    
                 </li>
                 <li>
                     <div class="block-working-img">
                         <img src="images/working-ico-2.png" alt="">
                     </div>
-                    <div class="block-working-name">
-                        Уточняем заказ
-                    </div>
-                    <div class="block-working-note">
-                        Наш менеджер поможет<br>с оформлением заказа
-                    </div>
+                    <div class="block-working-desc">
+                        <div class="block-working-desc-name">
+                            Уточняем заказ
+                        </div>
+                        <div class="block-working-desc-note">
+                            Наш менеджер поможет<br>с оформлением заказа
+                        </div>
+                    </div> 
                 </li>
                 <li>
                     <div class="block-working-img">
                         <img src="images/working-ico-3.png" alt="">
                     </div>
-                    <div class="block-working-name">
-                        Доставка
-                    </div>
-                    <div class="block-working-note">
-                        Доставляем заказы по <br>Москве и МО
-                    </div>
+                    <div class="block-working-desc">
+                        <div class="block-working-desc-name">
+                            Доставка
+                        </div>
+                        <div class="block-working-desc-note">
+                            Доставляем заказы по <br>Москве и МО
+                        </div>
+                    </div> 
                 </li>
                 <li>
                     <div class="block-working-img">
                         <img src="images/working-ico-4.png" alt="">
                     </div>
-                    <div class="block-working-name">
-                        Оплата заказа
-                    </div>
-                    <div class="block-working-note">
-                        Вы получаете свой<br>товар и оплачиваете
-                    </div>
+                    <div class="block-working-desc">
+                        <div class="block-working-desc-name">
+                            Оплата заказа
+                        </div>
+                        <div class="block-working-desc-note">
+                            Вы получаете свой<br>товар и оплачиваете
+                        </div>
+                    </div> 
                 </li>
             </ul>
         </div> 
