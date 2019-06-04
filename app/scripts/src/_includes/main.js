@@ -13,6 +13,39 @@ $(function(){
     });
 
 
+    /* Регистрация манипуляции )) */
+
+    $('.js-passwort-vergessen').on('click',function(event){
+        event.preventDefault();
+
+        $('.js-form-autorisierung').removeClass('active');
+        $('.js-block-wiederherstellen').addClass('active');
+        $('.js-login-title').text('ЗАБЫЛИ ПАРОЛЬ?');
+
+        $('.login-top-nav > div:nth-child(1)').removeClass('active');
+        $('.login-top-nav > div:nth-child(2)').addClass('active');
+    });
+
+    $('.btn-login-mob > div').on('click',function(){
+        $('.btn-login-mob > div').removeClass('active');
+        $(this).addClass('active');
+
+        $('.js-login-wr > div').removeClass('active');
+        $('.js-login-wr > div').eq($(this).index()).addClass('active');
+    });
+
+    $('.wiederherstellen-back span').on('click',function(){
+        $('.login-top-nav > div:nth-child(2)').removeClass('active');
+        $('.login-top-nav > div:nth-child(1)').addClass('active');
+
+        $('.js-block-wiederherstellen').removeClass('active');
+        $('.js-form-autorisierung').addClass('active');
+    });
+
+
+
+
+
 
 
     s3Animator.once = true;
@@ -214,5 +247,17 @@ $(function(){
             }
         }
     });
+
+
+    $('.js-slider-product-order').owlCarousel({
+        nav : true,
+        dots: false,
+        loop: true,
+        items:1
+    });
+
+
+
+
     
 });
