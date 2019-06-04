@@ -232,7 +232,7 @@ $(function(){
                 items:1
             },
             768:{
-                items:1
+                items:2
             },
             960:{
                 items:2
@@ -253,7 +253,7 @@ $(function(){
                 items:1
             },
             768:{
-                items:1
+                items:2
             },
             960:{
                 items:2

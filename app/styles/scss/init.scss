@@ -224,6 +224,19 @@ a {
 				padding: 0;
 			}
 		}
+		&.catalog {
+			@media all and (max-width: 640px) {
+				padding: 0 10px;
+			}
+		}
+		&.card-page {
+			@media all and (max-width: 800px) {
+				padding: 0 20px;
+			}
+			@media all and (max-width: 640px) {
+				padding: 0 10px;
+			}
+		}
 	}
 	@media all and (max-width: 800px) {
 		padding-top: 61px;
@@ -2054,14 +2067,15 @@ a {
 	}
 	.block-filtrs-title {
 		display: none;
-		margin: 0 20px;
-		color: #000;
-		font-size: 19px;
+		margin: 0 0 10px;
+		color: #fff;
+		font-size: 15px;
 		text-transform: uppercase;
-		padding: 22px 34px 16px 20px;
+		padding: 15px 20px 6px 54px;
+		height: 48px;
 		position: relative;
-		border: 1px solid #ebeeee;
-		margin-bottom: -1px;
+		font-weight: bold;
+		background: #202121;
 		&.active {
 			&:after {
 				transform: rotate(180deg);
@@ -2071,13 +2085,13 @@ a {
 			content: '';
 			display: block;
 			position: absolute;
-			top: 32px;
-			right: 20px;
-			width: 10px;
-			height: 6px;
-			background: url('../images/filter-ico.png') 0 0 no-repeat;
+			top: 15px;
+			left: 21px;
+			width: 18px;
+			height: 18px;
+			background: url('../images/ico-filters.png') 0 0 no-repeat;
 		}
-		@media all and (max-width: 640px) {
+		@media all and (max-width: 800px) {
 			display: block;
 		}
 	}
@@ -2090,10 +2104,11 @@ a {
 		@media all and (max-width: 1440px) {
 			padding: 0 30px;
 		}
-		@media all and (max-width: 640px) {
-			padding: 0 20px;
+		@media all and (max-width: 1024px) {
+			padding: 0;
+		}
+		@media all and (max-width: 1024px) {
 			display: none;
-			margin-bottom: 0;
 			&.active {
 				display: flex;
 			}
@@ -2106,6 +2121,13 @@ a {
 				width: 33.33333%;
 				position: relative;
 				padding: 0 12px 12px 0;
+				@media all and (max-width: 1024px) {
+					width: 50%;
+				}
+				@media all and (max-width: 640px) {
+					width: 100%;
+					padding: 0 0 10px;
+				}
 				&-title {
 					cursor: pointer;
 					border: 1px solid #ebeeee;
@@ -2122,6 +2144,33 @@ a {
 					&.active {
 						background: #202121 url('../images/ico-filter-h.png') right 22px top 23px no-repeat;
 						color: #fff;
+						@media all and (max-width: 640px) {
+							color: #000;
+							background: #fff url('../images/ico-filter-h-mob.png') right 22px top 23px no-repeat;
+							position: relative;
+							font-weight: bold;
+							&:after {
+								content: '';
+								display: block;
+								height: 2px;
+								background: #fff;
+								position: absolute;
+								bottom: -2px;
+								right: 0;
+								left: 0;
+							}
+							&:before {
+								content: '';
+								display: block;
+								height: 2px;
+								background: #ebeeee;
+								position: absolute;
+								bottom: -4px;
+								right: 20px;
+								left: 20px;
+								z-index: 10;
+							}
+						}
 					}
 				}
 				&-body {
@@ -2142,6 +2191,7 @@ a {
 					@media all and (max-width: 640px) {
 						position: static;
 						margin-top: 0;
+						padding-top: 24px;
 					}
 					.field-checkbox {
 						// @-moz-document url-prefix() {
@@ -2198,6 +2248,10 @@ a {
 		}
 		&-right {
 			display: flex;
+			@media all and (max-width: 640px) {
+				flex-direction: column;
+				width: 100%;
+			}
 			button {
 				display: flex;
 				align-items: center;
@@ -2209,6 +2263,13 @@ a {
 				background: #f7f7f7; 
 				margin: 0 0 0 12px;
 				outline-style: none;
+				@media all and (max-width: 800px) {
+					margin: 0 12px 0 0;
+				}
+				@media all and (max-width: 640px) {
+					margin: 0 0 12px;
+					width: 100%;
+				}
 				&.btn-show {
 					color: #5399ea;
 					font-weight: 800;
@@ -2234,38 +2295,48 @@ a {
 					font-weight: 400;
 					text-transform: uppercase;
 					position: relative;
-					padding-left: 40px;
+					padding-left: 0;
 					text-align: left;
 					padding-top: 2px;
-					&:after {
-						content: '';
-						display: block;
-						width: 8px;
-						height: 8px;
-						position: absolute;
-						top: 22px;
-						left: 23px;
-						background: url('../images/ico-reset-1.png') 0 0 no-repeat;
+					span {
+						position: relative;
+						padding-left: 22px;
+						&:after {
+							content: '';
+							display: block;
+							width: 8px;
+							height: 8px;
+							position: absolute;
+							top: 4px;
+							left: 0;
+							background: url('../images/ico-reset-1.png') 0 0 no-repeat;
+						}
 					}
 					&:hover {
 						color: #fff;
 						background: #dc1577;
-						&:after {
-							background: url('../images/ico-reset-2.png') 0 0 no-repeat;
-						}
+						span {
+							&:after {
+								background: url('../images/ico-reset-2.png') 0 0 no-repeat;
+							}
+						}						
 					}
 					&.no {
 						cursor: default;
 						color: #aaa;
 						background: #f7f7f7;
-						&:after {
-							background: url('../images/ico-reset-3.png') 0 0 no-repeat;
-						}
+						span {
+							&:after {
+								background: url('../images/ico-reset-3.png') 0 0 no-repeat;
+							}
+						}	
 						&:hover {
 							color: #aaa;
 							background: #f7f7f7;
-							&:after {
-								background: url('../images/ico-reset-3.png') 0 0 no-repeat;
+							span {
+								&:after {
+									background: url('../images/ico-reset-3.png') 0 0 no-repeat;
+								}
 							}
 						}
 					}
@@ -2330,11 +2401,6 @@ a {
 	}
 
 
-	.products-list {
-		display: flex;
-		flex-wrap: wrap;
-		padding: 0;
-	}
 
 	.slider-products-name {
 		text-align: center;
@@ -2350,10 +2416,16 @@ a {
 			color: #202121;
 			margin-bottom: 6px;
 		}
+		@media all and (max-width: 640px) {
+			text-align: left;
+			padding-left: 20px;
+		}
 		&.main {
 			margin-bottom: 10px;
 			@media all and (max-width: 800px) {
 				margin-bottom: 6px;
+				text-align: center;
+				padding-left: 0;
 			}
 		}
 	}
@@ -2495,6 +2567,41 @@ a {
 			}
 		}
 	}
+	
+
+	.products-list {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+		.product-wr {
+			@media all and (max-width: 1024px) {
+				padding: 30px 15px 30px;
+			}
+			@media all and (max-width: 800px) {
+				width: 50%;
+			}
+			@media all and (max-width: 640px) {
+				width: 100%;
+			}
+			&-bot {
+				@media all and (max-width: 1024px) {
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+				}
+				@media all and (max-width: 800px) {
+					flex-direction: row;
+					align-items: center;
+					justify-content: space-between;
+				}
+				@media all and (max-width: 320px) {
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+				}
+			}
+		}
+	}
 
 	.product-wr {
 		width: 33.33333%;
@@ -2502,6 +2609,9 @@ a {
 		margin: 0 -1px -1px 0;
 		padding: 48px 32px 40px;
 		position: relative;
+		@media all and (max-width: 800px) {
+			padding: 24px 15px 28px;
+		}
 		&:hover {
 			border-color: #5f6060;
 			z-index: 10;
@@ -2512,6 +2622,9 @@ a {
 		&-coincidence {
 			padding: 0 8px;
 			margin-bottom: 18px;
+			@media all and (max-width: 800px) {
+				margin-bottom: 10px;
+			}
 			span {
 				display: inline-block;
 				vertical-align: top;
@@ -2522,6 +2635,11 @@ a {
 				background: #a1c7f3;
 				padding: 4px 6px 0;
 				height: 25px;
+				@media all and (max-width: 800px) {
+					font-size: 11px;
+					height: 20px;
+					padding-top: 2px;
+				}
 			}
 		}
 		&-title {
@@ -2531,6 +2649,9 @@ a {
 			font-size: 15px;
 			text-transform: uppercase;
 			margin-bottom: 2px;
+			@media all and (max-width: 800px) {
+				font-size: 14px;
+			}
 			a {
 				color: #000;
 				text-decoration: none;
@@ -2543,6 +2664,9 @@ a {
 			font-weight: 300;
 			color: #000;
 			text-transform: uppercase;
+			@media all and (max-width: 800px) {
+				margin-bottom: 12px;
+			}
 			a {
 				color: #000;
 				text-decoration: underline;
@@ -2556,9 +2680,17 @@ a {
 			justify-content: space-between;
 			align-items: center;
 			padding: 0 8px;
+			@media all and (max-width: 320px) {
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: flex-start;
+			}
 			&-left {
 				.price-old {
 					margin-bottom: 2px;
+					@media all and (max-width: 800px) {
+						margin-bottom: 0;
+					}
 					&-in {
 						text-decoration: line-through;
 						color: #aaa;
@@ -2566,6 +2698,9 @@ a {
 						display: inline-block;
 						vertical-align: top;
 						padding-top: 2px;
+						@media all and (max-width: 800px) {
+							font-size: 14px;
+						}
 					}
 					.discount {
 						display: inline-block;
@@ -2577,15 +2712,25 @@ a {
 						padding: 0 5px;
 						border-radius: 3px;
 						margin: 0 0 0 8px;
+						@media all and (max-width: 800px) {
+							font-size: 11px;
+						}
 					}
 				}
 				.price-current {
 					color: #dc1577;
 					font-size: 24px;
 					font-weight: 800;
+					@media all and (max-width: 800px) {
+						font-size: 20px;
+					}
 				}
 			}
 			&-right {
+				@media all and (max-width: 320px) {
+					text-align: center;
+					width: 100%;
+				}
 				button {
 					cursor: pointer;
 					display: inline-block;
@@ -2612,6 +2757,10 @@ a {
 						top: 15px;
 						left: 28px;
 						background: url('../images/btn-cart.png') 0 0 no-repeat;
+						@media all and (max-width: 800px) {
+							background-size: auto 12px;
+							left: 22px;
+						}
 					} 
 					&:hover {
 						color: #fff;
@@ -2619,13 +2768,20 @@ a {
 						border: 1px solid #5399ea;
 						&:after {
 							background: url('../images/btn-cart-h.png') 0 0 no-repeat;
+							@media all and (max-width: 800px) {
+								background-size: auto 12px;
+							}
 						}
+					}
+					@media all and (max-width: 800px) {
+						font-size: 12px;
+						padding: 0 22px 0 46px;
+						height: 44px;
 					}
 				}
 			}
 		}
 	}
-
 
 
 	.pagination-wr {
@@ -2642,7 +2798,7 @@ a {
 		}
 		@media all and (max-width: 640px) {
 			margin-bottom: 40px;
-			padding-top: 10px;
+			padding-top: 30px;
 		}
 		a {
 			color: #000;
@@ -2667,9 +2823,21 @@ a {
 		display: flex;
 		padding: 0;
 		margin: 0;
+		@media all and (max-width: 800px) {
+			flex-direction: column;
+			margin-bottom: 30px;
+		}
 		&-img {
 			padding: 80px 36px 30px 40px;
 			flex: 798px;
+			@media all and (max-width: 800px) {
+				flex: auto;
+				border-bottom: 1px solid #ebeeee;
+				padding: 20px 30px 24px;
+			}
+			@media all and (max-width: 640px) {
+				padding: 20px 20px 24px;
+			}
 			.product-card-name {
 				.product-card-params-name {
 					display: none;
@@ -2701,14 +2869,17 @@ a {
 				@media all and (max-width: 1024px) {
 					display: block;
 				}
+				@media all and (max-width: 800px) {
+					margin-bottom: 0;
+				}
 				ul {
 					justify-content: center;
 					li {
-						@media all and (max-width: 800px) {
+						@media all and (max-width: 640px) {
 							width: 8px;
 							height: 8px;
 							border-radius: 50%;
-							background: #5399ea;
+							background: #c7c7c7;
 							margin: 0 4px;
 							position: relative;
 							&:before {
@@ -2721,14 +2892,14 @@ a {
 								height: 16px;
 							}
 							&.active {
-								background: #202121;
+								background: #5399ea;
 							}
 							&:after {
 								display: none;
 							}
 						}
 						img {
-							@media all and (max-width: 800px) {
+							@media all and (max-width: 640px) {
 								display: none;
 							}
 						}
@@ -2740,7 +2911,27 @@ a {
 			position: relative;
 			height: 360px;
 			margin-bottom: 4px;
-			//background: url('../images/bg-product.png') 0 0 no-repeat;
+			@media all and (max-width: 1024px) {
+				height: 230px;
+			}
+			@media all and (max-width: 800px) {
+				height: 315px;
+			}
+			@media all and (max-width: 640px) {
+				height: 204px;
+			}
+			@media all and (max-width: 411px) {
+				height: 196px;
+			}
+			@media all and (max-width: 375px) {
+				height: 180px;
+			}
+			@media all and (max-width: 360px) {
+				height: 176px;
+			}
+			@media all and (max-width: 160px) {
+				height: 204px;
+			}
 			.images {
 				> div {
 					position: absolute;
@@ -2771,12 +2962,19 @@ a {
 			flex: 480px;
 			padding: 36px 34px 30px 40px;
 			border-left: 1px solid #ebeeee;
+			@media all and (max-width: 640px) {
+				padding: 20px;
+			}
 			h1 {
 				color: #000;
 				font-size: 29px;
 				line-height: 1;
 				font-weight: 800;
 				margin: 0 0 12px;
+				@media all and (max-width: 640px) {
+					font-size: 16px;
+					margin-bottom: 6px;
+				}
 			}
 			&-name {
 				text-transform: uppercase;
@@ -2785,18 +2983,25 @@ a {
 				line-height: 1;
 				font-weight: 300;
 				margin-bottom: 8px;
+				@media all and (max-width: 640px) {
+					font-size: 14px;
+					margin-bottom: 12px;
+				}
 			}
 			&-rating {
 				margin-bottom: 18px;
 				@media all and (max-width: 1024px) {
 					margin-bottom: 30px;
 				}
-				@media all and (max-width: 800px) {
-					display: none;
+				@media all and (max-width: 640px) {
+					margin-bottom: 10px;
 				}
 			}
 			&-coincidence {
 				margin-bottom: 28px;
+				@media all and (max-width: 640px) {
+					margin-bottom: 18px;
+				}
 				span {
 					display: inline-block;
 					vertical-align: top;
@@ -2807,10 +3012,18 @@ a {
 					background: #a1c7f3;
 					padding: 3px 12px 0;
 					height: 26px;
+					@media all and (max-width: 640px) {
+						font-size: 14px;
+						height: 20px;
+						padding-top: 2px;
+					}
 				}
 			}
 			&-price {
 				margin-bottom: 18px;
+				@media all and (max-width: 640px) {
+					margin-bottom: 12px;
+				}
 				.price-old {
 					margin-bottom: 2px;
 					&-in {
@@ -2820,6 +3033,9 @@ a {
 						display: inline-block;
 						vertical-align: top;
 						padding-top: 2px;
+						@media all and (max-width: 640px) {
+							font-size: 14px;
+						}
 					}
 					.discount {
 						display: inline-block;
@@ -2831,6 +3047,9 @@ a {
 						padding: 0 5px;
 						border-radius: 3px;
 						margin: 0 0 0 8px;
+						@media all and (max-width: 640px) {
+							font-size: 12px;
+						}
 					}
 				}
 				.price-current {
@@ -2838,11 +3057,17 @@ a {
 					font-size: 28px;
 					line-height: 1;
 					font-weight: 800;
+					@media all and (max-width: 640px) {
+						font-size: 20px;
+					}
 				}
 			}
 			&-buy {
 				display: flex;
 				margin-bottom: 22px;
+				@media all and (max-width: 320px) {
+					flex-direction: column-reverse;
+				}
 				.btn-buy {
 					cursor: pointer;
 					outline-style: none;
@@ -2861,12 +3086,25 @@ a {
 					border-radius: 40px;
 					font-weight: 800;
 					border: none;
+					@media all and (max-width: 640px) {
+						height: 44px;
+						width: 160px;
+					}
+					@media all and (max-width: 320px) {
+						margin-top: 10px;
+					}
 					span {
 						display: inline-block;
 						padding-left: 30px;
 						min-height: 21px;
 						padding-top: 2px;
 						background: url('../images/btn-cart-h.png') 0 0 no-repeat;
+						@media all and (max-width: 640px) {
+							background-size: auto 13px;
+							padding-left: 23px;
+							background-position: 0 3px;
+							padding-top: 0;
+						}
 					}
 					&:hover {
 						background: #5da8ff;
@@ -2897,9 +3135,16 @@ a {
 			width: 110px;
 			height: 19px;
 			background: url('../images/star.png') 0 0 repeat-x;
+			@media all and (max-width: 640px) {
+				width: 90px;
+				background-size: auto 16px;
+			}
 			.tpl-rating {
 				height: 19px;
 				background: url('../images/star-active.png') 0 0 repeat-x;
+				@media all and (max-width: 640px) {
+					background-size: auto 16px;
+				}
 			}
 		}
 		.product-card-params-thumbs {
@@ -2920,8 +3165,17 @@ a {
 					justify-content: center;
 					position: relative;
 					background: #f7f7f7;
+					@media all and (max-width: 640px) {
+						width: 8px;
+						height: 8px;
+						border: none;
+						background: #c7c7c7;
+					}
 					&.active {
 						border: 1px solid #202121;
+						@media all and (max-width: 640px) {
+							border: none;
+						}
 					}
 				}
 			}
@@ -2934,6 +3188,10 @@ a {
 		border: 1px solid #ebeeee;
 		display: flex;
 		border-radius: 40px;
+		@media all and (max-width: 640px) {
+			height: 44px;
+			width: 108px;
+		}
 		button {
 			display: block;
 			cursor: pointer;
@@ -2946,6 +3204,9 @@ a {
 			background: #fbfbfb;
 			border: none;
 			position: relative;
+			@media all and (max-width: 640px) {
+				width: 32px;
+			}
 			&.minus {
 				border-radius: 40px 0 0 40px;
 				&:after {
@@ -2957,6 +3218,11 @@ a {
 					top: 25px;
 					left: 15px;
 					background: #595959;
+					@media all and (max-width: 640px) {
+						width: 8px;
+						top: 20px;
+						left: 13px;
+					}
 				}
 			}
 			&.plus {
@@ -2970,6 +3236,11 @@ a {
 					top: 25px;
 					left: 14px;
 					background: #595959;
+					@media all and (max-width: 640px) {
+						width: 8px;
+						top: 20px;
+						left: 13px;
+					}
 				}
 				&:before {
 					content: '';
@@ -2980,6 +3251,11 @@ a {
 					top: 20px;
 					left: 19px;
 					background: #595959;
+					@media all and (max-width: 640px) {
+						height: 8px;
+						top: 17px;
+						left: 16px;
+					}
 				}
 			}
 			&.disabled {
@@ -2999,6 +3275,9 @@ a {
 			width: 56px;
 			border-left: 1px solid #ebeeee;
 			border-right: 1px solid #ebeeee;
+			@media all and (max-width: 640px) {
+				width: 40px;
+			}
 		}
 	}
 	
@@ -3794,6 +4073,9 @@ a {
 
 	.tabs-card {
 		margin-bottom: 84px;
+		@media all and (max-width: 800px) {
+			margin-bottom: 30px;
+		}
 		&-title {
 			display: flex;
 			flex-wrap: wrap;
@@ -3808,6 +4090,10 @@ a {
 				border: 1px solid #ebeeee;
 				border-bottom: none;
 				cursor: pointer;
+				@media all and (max-width: 800px) {
+					font-size: 12px;
+					padding: 18px 40px 14px;
+				}
 				&.active {
 					background: #202121;
 					color: #fff;
@@ -3821,6 +4107,11 @@ a {
 			font-weight: 300;
 			font-size: 19px;
 			line-height: 1.6;
+			@media all and (max-width: 800px) {
+				padding: 20px;
+				font-size: 16px;
+				line-height: 1.5;
+			}
 			> div {
 				display: none;
 				&.active {
@@ -3977,7 +4268,7 @@ a {
 		margin: 0 0 50px;
 		border: 1px solid #ebeeee;
 		overflow: hidden;
-		@media all and (max-width: 1440px) {
+		@media all and (max-width: 1024px) {
 			flex-direction: column;
 		}
 		@media all and (max-width: 800px) {
@@ -3986,13 +4277,16 @@ a {
 		&-desc {
 			width: 50%;
 			padding: 70px 50px 70px 50px;
-			@media all and (max-width: 1440px) {
+			@media all and (max-width: 1024px) {
 				width: 100%;
-				padding: 88px 60px 70px;
+				padding: 60px 60px 40px;
 			}
 			@media all and (max-width: 800px) {
 				padding: 46px 30px 38px;
 				text-align: center;
+			}
+			@media all and (max-width: 640px) {
+				text-align: left;
 			}
 			&-info {
 				color: #000;
@@ -4014,6 +4308,9 @@ a {
 					@media all and (max-width: 800px) {
 						display: block;
 					}
+					@media all and (max-width: 640px) {
+						font-weight: 400;
+					}
 					a.tel {
 						color: #000;
 						text-decoration: none;
@@ -4026,12 +4323,12 @@ a {
 		}
 		&-map {
 			width: 50%;
-			@media all and (max-width: 1440px) {
+			@media all and (max-width: 1024px) {
 				width: 100%;
 				height: 320px;
 			}
-			@media all and (max-width: 800px) {
-				display: none;
+			@media all and (max-width: 640px) {
+				height: 200px;
 			}
 		}
 	}
@@ -4041,6 +4338,12 @@ a {
 		border: 1px solid #ebeeee;
 		padding: 74px 0 40px;
 		margin-bottom: 40px;
+		@media all and (max-width: 1024px) {
+			padding: 40px 0 20px;
+		}
+		@media all and (max-width: 640px) {
+			padding: 20px 0 10px;
+		}
 		h2 {
 			font-size: 24px;
 			font-weight: 800;
@@ -4048,6 +4351,13 @@ a {
 			color: #202121;
 			padding: 0;
 			margin-bottom: 40px;
+			@media all and (max-width: 1024px) {
+				margin-bottom: 20px;
+			}
+			@media all and (max-width: 640px) {
+				font-size: 17px;
+				margin-bottom: 14px;
+			}
 		}
 	}
 	
@@ -4060,6 +4370,9 @@ a {
 		font-weight: 300;
 		@media all and (max-width: 800px) {
 			margin-bottom: 40px;
+		}
+		@media all and (max-width: 640px) {
+			margin-bottom: 10px;
 		}
 		&-filed {
 			margin-bottom: 30px;
@@ -4197,6 +4510,12 @@ a {
 					@media all and (max-width: 640px) {
 						min-width: auto;
 						width: 100%;
+						background: #202121;
+						color: #fff;
+						&:hover {
+							background: #eeeeee;
+							color: #fff;
+						}
 					}
 				}
 			}
@@ -4208,9 +4527,6 @@ a {
 		font-size: 14px;
 		padding: 0;
 		font-weight: 300;
-		@media all and (max-width: 800px) {
-			display: none;
-		}
 		span {
 			padding: 0 10px;
 		}
@@ -4505,6 +4821,22 @@ a {
 		}
 		@media all and (max-width: 800px) {
 			flex-direction: column;
+		}
+		&.card {
+			border-bottom: 1px solid #ebeeee;
+			margin-bottom: 100px;
+			@media all and (max-width: 800px) {
+				border-bottom: none;
+				margin-bottom: 10px;
+			}
+			> div {
+				padding: 26px 0 20px 0;
+				min-height: 110px;
+				@media all and (max-width: 800px) {
+					padding: 10px 0;
+					min-height: 10px;
+				}
+			}
 		}
 		> div {
 			display: flex;
