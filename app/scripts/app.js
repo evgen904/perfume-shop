@@ -228,13 +228,19 @@ $(function(){
         items:3,
         responsive:{
             0:{
-                items:1
+                items:1,
+                autoplay:true,
+                autoplayTimeout: 7000
             },
             768:{
-                items:2
+                items:2,
+                autoplay:true,
+                autoplayTimeout: 7000
             },
             960:{
-                items:2
+                items:2,
+                autoplay:true,
+                autoplayTimeout: 7000
             },
             1200:{
                 items:3
@@ -249,13 +255,19 @@ $(function(){
         items:3,
         responsive:{
             0:{
-                items:1
+                items:1,
+                autoplay:true,
+                autoplayTimeout: 7000
             },
             768:{
-                items:2
+                items:2,
+                autoplay:true,
+                autoplayTimeout: 7000
             },
             960:{
-                items:2
+                items:2,
+                autoplay:true,
+                autoplayTimeout: 7000
             },
             1200:{
                 items:3
@@ -271,6 +283,13 @@ $(function(){
         items:1
     });
 
+
+
+    $('.js-tabs-card-title > div').on('click',function(){
+        $('.js-tabs-card-title > div, .js-tabs-card-body > div').removeClass('active');
+        $(this).addClass('active');
+        $('.js-tabs-card-body > div').eq($(this).index()).addClass('active');
+    });
 
 
 

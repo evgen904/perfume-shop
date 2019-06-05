@@ -70,34 +70,32 @@
 
 h1 {
 	color: #202121;
-	font-size: 45px;
+	font-size: 40px;
 	font-weight: 300;
 	padding: 0;
-	margin: 0 0 100px;
+	margin: 0 0 46px;
 	text-transform: uppercase;
-	@media all and (max-width: 1440px) {
-		font-size: 35px;
-		margin: 0 0 60px;
-	}
 	@media all and (max-width: 800px) {
-		font-size: 24px;
-		margin: 0 0 20px;
+		font-size: 20px;
+		font-weight: bold;
+		margin-bottom: 20px;
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 	&.center {
-		font-size: 45px;
+		font-size: 40px;
 		text-transform: uppercase;
 		text-align: center;
-		padding: 87px 140px 0;
-		margin: 0 0 50px 0;
-		@media all and (max-width: 1440px) {
-			font-size: 35px;
-			padding: 60px 30px 0;
-			margin-bottom: 40px;
-		}
+		padding: 34px 30px 0;
+		margin: 0 0 64px;
 		@media all and (max-width: 800px) {
-			font-size: 24px;
-			padding: 50px 30px 0;
 			margin-bottom: 20px;
+			padding-top: 20px;
+			font-size: 20px;
+			font-weight: bold;
+		}
+		&.order {
+			margin-bottom: 8px;
 		}
 	}
 	&.contacts-form-title {
@@ -107,15 +105,6 @@ h1 {
 		font-weight: 300;
 		color: #202121;
 		padding-top: 120px;
-		@media all and (max-width: 1440px) {
-			font-size: 35px;
-			padding-top: 80px;
-			margin-bottom: 0;
-		}
-		@media all and (max-width: 800px) {
-			font-size: 24px;
-			padding-top: 40px;
-		}
 	}
 }
 
@@ -232,7 +221,15 @@ a {
 		&.card-page {
 			@media all and (max-width: 800px) {
 				padding: 0 20px;
+				.site-path {
+					margin-bottom: 22px;
+				}
 			}
+			@media all and (max-width: 640px) {
+				padding: 0 10px;
+			}
+		}
+		&.main {
 			@media all and (max-width: 640px) {
 				padding: 0 10px;
 			}
@@ -527,6 +524,7 @@ a {
 									text-transform: uppercase;
 									padding-bottom: 20px;
 									font-size: 14px;
+									transition: all 0.3s ease;
 									@media all and (max-width: 800px) {
 										padding: 16px 30px;
 									}
@@ -883,12 +881,17 @@ a {
 		border-bottom: 1px solid #ebeeee;
 		color: #202121;
 		font-size: 19px;
+		margin-bottom: 26px;
+		&.main {
+			margin-bottom: 0;
+		}
 		@media all and (max-width: 1280px) {
 			padding-left: 30px;
 			padding-right: 30px;
 		}
 		@media all and (max-width: 800px) {
 			position: fixed;
+			margin-bottom: 0;
 			top: 122px;
 			bottom: 0;
 			left: 0;
@@ -1078,7 +1081,7 @@ a {
 								top: 100%;
 								left: 50%;
 								margin-left: -5px;
-								margin-top: -12px;
+								margin-top: -13px;
 								transition: all 0.3s ease;
 								font-weight: 400;
 								@media all and (max-width: 800px) {
@@ -1121,6 +1124,7 @@ a {
 							box-shadow: 3px 3px 0 rgba(95,95,95,.06);
 							z-index: 10;
 							padding: 0 76px 30px;
+							margin-top: -1px;
 							@media all and (max-width: 800px) {
 								position: fixed;
 								top: 156px;
@@ -1240,6 +1244,7 @@ a {
 					text-decoration: underline;
 					text-transform: uppercase;
 					padding-top: 2px;
+					transition: all 0.3s ease;
 					&:hover {
 						color: #5399ea;
 						background: url('../images/ico-login-h.png') 0 50% no-repeat;
@@ -1367,6 +1372,13 @@ a {
 				width: 70px;
 				height: 100%;
 				background: #ebeeee;
+				transition: background 0.3s ease;
+				&:hover {
+					background: #5399ea;
+					&:after, &:before {
+						background: #fff;
+					}
+				}
 				@media all and (max-width: 1024px) {
 					width: 100px;
 				}
@@ -1382,8 +1394,10 @@ a {
 					top: 21px;
 					left: 34px;
 					width: 1px;
+					transition: background 0.3s ease;
 					height: 30px;
 					background: #494b4b;
+					transition: all 0.3s ease;
 					@media all and (max-width: 1024px) {
 						left: 52px;
 					}
@@ -1423,6 +1437,9 @@ a {
 					}
 					@media all and (max-width: 800px) {
 						height: 380px;
+					}
+					@media all and (max-width: 640px) {
+						background-position: 70% 0 !important;
 					}
 					img {
 						display: none;
@@ -1552,7 +1569,11 @@ a {
 								text-decoration: none;
 								min-width: 275px;
 								background: #d4167a;
+								transition: all 0.3s ease;
 								box-shadow: 4px 4px 0 rgba(35,6,64,.29);
+								&:hover {
+									background: #f21a8c;
+								}
 								@media all and (max-width: 1024px) {
 									height: 48px;
 									padding: 18px 14px;
@@ -1589,6 +1610,7 @@ a {
 				width:27px;
 				height:6px;
 				background: #fff;
+				transition: all 0.3s ease;
 				&.active { 
 					background:#5399ea;
 				}
@@ -2012,6 +2034,7 @@ a {
 					position: absolute;
 					top: 50%;
 					margin-top: -26px;
+					cursor: pointer;
 					@media all and (max-width: 1440px) {
 						top: auto;
 						position: static;
@@ -2027,7 +2050,8 @@ a {
 						height: 52px;
 						font-size: 0;
 						line-height: 0;
-						background: url('../images/review-arrow.png') 0 0 no-repeat;
+						transition: all 0.3s ease;
+						cursor: pointer;
 					}
 					&.owl-prev {
 						left: -74px;
@@ -2037,11 +2061,11 @@ a {
 							margin-right: 4px !important;
 						}
 						span {
-							background-position: -2px 0;
+							background: url('../images/review-arrow11.png') -2px 0 no-repeat;
 						}
 						&:hover {
 							span {
-								background-position: -2px -72px;
+								background-position: -83px 0;
 							}
 						}
 					}
@@ -2053,11 +2077,11 @@ a {
 							margin-left: 4px !important;
 						}
 						span {
-							background-position: -81px 0;
+							background: url('../images/review-arrow22.png') 0px 0 no-repeat;
 						}
 						&:hover {
 							span {
-								background-position: -81px -72px;
+								background-position: -81px 0;
 							}
 						}
 					}
@@ -2141,6 +2165,8 @@ a {
 					line-height: 1;
 					background: #fff url('../images/ico-filter.png') right 22px top 23px no-repeat;
 					color: #000;
+					box-shadow: 2px 2px 0 rgba(95,95,95,.14);
+					transition: all 0.3s ease;
 					&.active {
 						background: #202121 url('../images/ico-filter-h.png') right 22px top 23px no-repeat;
 						color: #fff;
@@ -2263,6 +2289,8 @@ a {
 				background: #f7f7f7; 
 				margin: 0 0 0 12px;
 				outline-style: none;
+				box-shadow: 2px 2px 0 rgba(95,95,95,.14);
+				transition: all 0.3s ease;
 				@media all and (max-width: 800px) {
 					margin: 0 12px 0 0;
 				}
@@ -2443,6 +2471,7 @@ a {
 		a {
 			color: #a3a3a3;
 			text-decoration: underline;
+			transition: all 0.3s ease;
 			&:hover {
 				color: #5399ea;
 				text-decoration: none;
@@ -2459,6 +2488,9 @@ a {
 		@media all and (max-width: 800px) {
 			margin-bottom: 32px;
 		}
+		@media all and (max-width: 640px) {
+			border: none;
+		}
 		&:after {
 			content: '';
 			display: block;
@@ -2474,6 +2506,21 @@ a {
 			width: 100%;
 			margin: 0;
 			border: none;
+			@media all and (max-width: 640px) {
+				&:before {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0;
+					bottom: 4px;
+					left: 7px;
+					right: 4px;
+					bottom: 4px;
+					border: 1px solid #eeeeee;
+					box-shadow: 3px 3px 0 rgba(95,95,95,.06);
+					z-index: -1;
+				}				
+			}
 			&:after {
 				content: '';
 				display: block;
@@ -2515,6 +2562,7 @@ a {
 				position: absolute;
 				top: 50%;
 				margin-top: -26px;
+				cursor: pointer;
 				@media all and (max-width: 1440px) {
 					top: auto;
 					position: static;
@@ -2530,7 +2578,8 @@ a {
 					height: 52px;
 					font-size: 0;
 					line-height: 0;
-					background: url('../images/review-arrow.png') 0 0 no-repeat;
+					transition: all 0.3s ease;
+					cursor: pointer;
 				}
 				&.owl-prev {
 					left: -74px;
@@ -2540,11 +2589,11 @@ a {
 						margin-right: 4px !important;
 					}
 					span {
-						background-position: -2px 0;
+						background: url('../images/review-arrow11.png') -2px 0 no-repeat;
 					}
 					&:hover {
 						span {
-							background-position: -2px -72px;
+							background-position: -83px 0;
 						}
 					}
 				}
@@ -2556,11 +2605,11 @@ a {
 						margin-left: 4px !important;
 					}
 					span {
-						background-position: -81px 0;
+						background: url('../images/review-arrow22.png') 0px 0 no-repeat;
 					}
 					&:hover {
 						span {
-							background-position: -81px -72px;
+							background-position: -81px 0;
 						}
 					}
 				}
@@ -2749,6 +2798,7 @@ a {
 					border: 1px dashed #e5e5e5;
 					background: #fff;
 					box-shadow: 0 3px 0 rgba(95,95,95,.12);
+					transition: all 0.3s ease;
 					&:after {
 						content: '';
 						display: block;
@@ -2972,6 +3022,10 @@ a {
 				line-height: 1;
 				font-weight: 800;
 				margin: 0 0 12px;
+				@media all and (max-width: 800px) {
+					padding-left: 0;
+					padding-right: 0;
+				}
 				@media all and (max-width: 640px) {
 					font-size: 16px;
 					margin-bottom: 6px;
@@ -3087,6 +3141,8 @@ a {
 					border-radius: 40px;
 					font-weight: 800;
 					border: none;
+					box-shadow: 0 3px 0 rgba(95,95,95,.12);
+					transition: all 0.3s ease;
 					@media all and (max-width: 640px) {
 						height: 44px;
 						width: 160px;
@@ -3166,6 +3222,7 @@ a {
 					justify-content: center;
 					position: relative;
 					background: #f7f7f7;
+					transition: all 0.3s ease;
 					@media all and (max-width: 640px) {
 						width: 8px;
 						height: 8px;
@@ -3194,6 +3251,7 @@ a {
 			width: 108px;
 		}
 		button {
+			cursor: pointer;
 			display: block;
 			cursor: pointer;
 			outline-style: none;
@@ -3205,6 +3263,10 @@ a {
 			background: #fbfbfb;
 			border: none;
 			position: relative;
+			transition: all 0.3s ease;
+			&:hover {
+				background: #f1f1f1;
+			}
 			@media all and (max-width: 640px) {
 				width: 32px;
 			}
@@ -3219,10 +3281,16 @@ a {
 					top: 25px;
 					left: 15px;
 					background: #595959;
+					transition: all 0.3s ease;
 					@media all and (max-width: 640px) {
 						width: 8px;
 						top: 20px;
 						left: 13px;
+					}
+				}
+				&:hover {
+					&:after {
+						background: #595959;
 					}
 				}
 			}
@@ -3237,6 +3305,7 @@ a {
 					top: 25px;
 					left: 14px;
 					background: #595959;
+					transition: all 0.3s ease;
 					@media all and (max-width: 640px) {
 						width: 8px;
 						top: 20px;
@@ -3252,10 +3321,16 @@ a {
 					top: 20px;
 					left: 19px;
 					background: #595959;
+					transition: all 0.3s ease;
 					@media all and (max-width: 640px) {
 						height: 8px;
 						top: 17px;
 						left: 16px;
+					}
+				}
+				&:hover {
+					&:after, &:before {
+						background: #595959;
 					}
 				}
 			}
@@ -3352,6 +3427,12 @@ a {
 				position: relative;
 				width: 100%;
 				padding: 20px 0;
+				&:nth-child(1) {
+					display: none;
+				}
+				&:nth-child(2) {
+					border-top: 1px solid #f7f7f7;
+				}
 			}
 		}
 		td {
@@ -3507,6 +3588,7 @@ a {
 				background: #c7c7c7 url('../images/ico-del.png') 50% 50% no-repeat;
 				border-radius: 40px;
 				margin: 0 auto;
+				transition: all 0.3s ease;
 				@media all and (max-width: 640px) {
 					position: absolute;
 					top: 12px;
@@ -3530,6 +3612,10 @@ a {
 		justify-content: flex-end;
 		align-items: center;
 		padding-top: 50px;
+		margin-bottom: 80px;
+		@media all and (max-width: 800px) {
+			margin-bottom: 40px;
+		}
 		@media all and (max-width: 640px) {
 			flex-direction: column;
 			align-items: flex-start;
@@ -3564,6 +3650,11 @@ a {
 				border-radius: 40px;
 				padding: 18px 40px 0;
 				height: 52px;
+				box-shadow: 0 3px 0 rgba(95,95,95,.12);
+				transition: all 0.3s ease;
+				&:hover {
+					background: #5da8ff;
+				}
 				@media all and (max-width: 640px) {
 					display: block;
 					width: 100%;
@@ -3596,6 +3687,7 @@ a {
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
+		margin-bottom: 80px;
 		@media all and (max-width: 800px) {
 			flex-direction: column-reverse;
 		}
@@ -3635,10 +3727,14 @@ a {
 				font-weight: 400;
 				background: #f7f7f7;
 				border: 1px solid #ebeeee;
+				transition: all 0.3s ease;
 				&::-webkit-input-placeholder { color: #aaa; }
 				&:-ms-input-placeholder { color: #aaa; }
 				&::-ms-input-placeholder { color: #aaa; }
 				&::placeholder { color: #aaa; } 
+				&:focus {
+					border: 1px solid #cccccc;
+				}
 			}
 			textarea {
 				height: 120px;
@@ -3662,6 +3758,11 @@ a {
 				background: #5399ea;
 				color: #fff;
 				border: none;
+				box-shadow: 0 3px 0 rgba(95,95,95,.12);
+				transition: all 0.3s ease;
+				&:hover {
+					background: #5da8ff;
+				}
 				@media all and (max-width: 800px) {
 					border-radius: 0;
 					display: block;
@@ -3749,6 +3850,7 @@ a {
 									height: 20px;
 									border-radius: 50%;
 									margin-top: -1px;
+									transition: all 0.3s ease;
 									@media all and (max-width: 800px) {
 										width: 16px;
 										height: 16px;
@@ -3767,6 +3869,7 @@ a {
 									border-radius: 50%;
 									opacity: 0;
 									margin-top: -1px;
+									transition: all 0.3s ease;
 									@media all and (max-width: 800px) {
 										width: 8px;
 										height: 8px;
@@ -4063,7 +4166,7 @@ a {
 					bottom: 100%;
 					right: 0;
 					display: flex;
-					margin-bottom: 20px;
+					margin-bottom: 24px;
 					.owl-prev, .owl-next {
 						display: block;
 						cursor: pointer;
@@ -4108,6 +4211,7 @@ a {
 				border: 1px solid #ebeeee;
 				border-bottom: none;
 				cursor: pointer;
+				transition: all 0.3s ease;
 				@media all and (max-width: 800px) {
 					font-size: 12px;
 					padding: 18px 40px 14px;
@@ -4454,6 +4558,7 @@ a {
 					font-family: 'Circe';
 					width: 100%;
 					transition: all 0.3s ease;
+					box-shadow: 2px 2px 0 rgba(95,95,95,.14);
 					&::-webkit-input-placeholder { color: #a1a1a1; }
 					&:-ms-input-placeholder { color: #a1a1a1; }
 					&::-ms-input-placeholder { color: #a1a1a1; }
@@ -4476,13 +4581,14 @@ a {
 					text-transform: uppercase;
 					margin: 0;
 					border: 1px solid #ebeeee;
-					background: #eeeeee;
+					background: #f7f7f7;
 					color: #202121;
 					font-size: 14px;
 					font-weight: bold;
 					display: inline-block;
 					vertical-align: top;
 					min-width: 210px;
+					box-shadow: 2px 2px 0 rgba(95,95,95,.14);
 
 					position: relative;
 					z-index: 1;
@@ -4500,7 +4606,7 @@ a {
 					}
 					&:before {
 						right: 0;
-						border: 1px solid #202121;
+						border: 1px solid #5399ea;
 						border-left: 0;
 						border-right: 0;	
 					}
@@ -4509,14 +4615,14 @@ a {
 					}
 					&:hover {
 						color: #fff;
-						background: #202121;
+						background: #5399ea;
 						transition-delay: .3s;
 						&:before {
 							transition-delay: 0s;
 							width: 100%;
 						}
 						&:after {
-							background: #202121;
+							background: #5399ea;
 							transition-delay: .1s;
 							width: 100%;
 						}
@@ -4545,6 +4651,11 @@ a {
 		font-size: 14px;
 		padding: 0;
 		font-weight: 300;
+		margin-bottom: 24px;
+		@media all and (max-width: 800px) {
+			margin-bottom: 8px;
+			padding: 24px 30px 0;
+		}
 		span {
 			padding: 0 10px;
 		}
@@ -5518,24 +5629,11 @@ a {
 		}
 	}
 	.page-inner {
-		padding: 84px 0 40px;
+		padding: 0 0 60px;
 		font-size: 19px;
 		line-height: 1.6;
-		h1 {
-			text-align: center;
-			margin-bottom: 30px;
-			@media all and (max-width: 800px) {
-				margin-bottom: 10px;
-			}
-		}
-		@media all and (max-width: 1440px) {
-			padding-left: 30px;
-			padding-right: 30px;
-			padding-top: 60px;
-		}
-		@media all and (max-width: 800px) {
-			padding-left: 20px;
-			padding-right: 20px;
+		@media all and (max-width: 1280px) {
+			padding: 0 30px 60px;
 		}
 	}
 	
@@ -5552,6 +5650,9 @@ a {
 		margin-bottom: 24px;
 		@media all and (max-width: 800px) {
 			display: block;
+			margin-left: -20px;
+			margin-right: -20px;
+			padding: 0 30px;
 		}
 		> div:nth-child(1) {
 			display: none;
@@ -5600,6 +5701,7 @@ a {
 		font-size: 17px;
 		font-weight: 400;
 		line-height: 1.4;
+		margin-bottom: 80px;
 		@media all and (max-width: 800px) {
 			flex-direction: column;
 			font-size: 14px;
@@ -5638,6 +5740,7 @@ a {
 			color: #000;
 			font-size: 17px;
 			font-weight: 400;
+			transition: all 0.3s ease;
 			&::-webkit-input-placeholder { color: #aaa; }
 			&:-ms-input-placeholder { color: #aaa; }
 			&::-ms-input-placeholder { color: #aaa; }
@@ -5664,6 +5767,12 @@ a {
 			text-transform: uppercase;
 			color: #aaa;
 			text-align: center;
+			transition: all 0.3s ease;
+			box-shadow: 2px 2px 0 rgba(95,95,95,.14);
+			&:hover {
+				color: #fff;
+				background: #5399ea;
+			}
 			@media all and (max-width: 800px) {
 				height: 48px;
 				font-size: 14px;
@@ -5685,6 +5794,9 @@ a {
 				width: 256px;
 				color: #fff;
 				background: #5399ea;
+				&:hover {
+					background: #5da8ff;
+				}
 				@media all and (max-width: 800px) {
 					width: 100%;
 				}
