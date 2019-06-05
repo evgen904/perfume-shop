@@ -170,10 +170,10 @@ body {
 }
 
 a {
-	color: #5399ea;
+	color: #69a4ec;
 	text-decoration: underline;
 	&:hover {
-		color: #5399ea;
+		color: #69a4ec;
 		text-decoration: none;
 	}
 }
@@ -284,7 +284,7 @@ a {
 			}
 			.site-header-in-right .cart-top {
 				min-width: 34px;
-				padding-top: 12px;
+				padding-top: 5px;
 			}
 			.site-header-in-right .cart-top .cart-top-amount {
 				margin-right: 0;
@@ -2609,6 +2609,7 @@ a {
 		margin: 0 -1px -1px 0;
 		padding: 48px 32px 40px;
 		position: relative;
+		transition: border 0.35s ease;
 		@media all and (max-width: 800px) {
 			padding: 24px 15px 28px;
 		}
@@ -3572,7 +3573,24 @@ a {
 		}
 	}
 	
-	
+	.form-order-text {
+		text-align: center;
+		font-size: 15px;
+		font-weight: 300;
+		margin-bottom: 50px;
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		@media all and (max-width: 1024px) {
+			margin-bottom: 20px;
+		}
+		@media all and (max-width: 640px) {
+			display: none;
+		}
+	}
 
 	.form-order {
 		display: flex;
@@ -5309,6 +5327,7 @@ a {
 								a {
 									color: #a6a6a6;
 									text-decoration: none;
+									transition: color 0.35s ease;
 									&:hover {
 										color: #fff;
 										text-decoration: underline;
@@ -5423,9 +5442,11 @@ a {
 							border-radius: 50%;
 							border: 1px solid #565757;
 							margin: 0 12px 0 0;
+							transition: all 0.35s ease;
 							img {
 								vertical-align: sub;
 								opacity: 0.6;
+								transition: all 0.35s ease;
 							}
 							&:hover {
 								border-color: #bdbdbd;
@@ -5497,7 +5518,7 @@ a {
 		}
 	}
 	.page-inner {
-		padding: 84px 60px 40px;
+		padding: 84px 0 40px;
 		font-size: 19px;
 		line-height: 1.6;
 		h1 {
