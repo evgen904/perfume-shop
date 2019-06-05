@@ -5248,6 +5248,39 @@ a {
 							padding: 24px 0 24px;
 							border-bottom: 1px solid #3d3e3e;
 						}
+						&.hasclass {
+							> a {
+								position: relative;
+								&:after {
+									content: '';
+									display: block;
+									position: absolute;
+									top: 6px;
+									right: 29px;
+									width: 12px;
+									height: 6px;
+									background: url('../images/menu-bot-arrow.png') 0 0 no-repeat;
+									transition: all 0.35s ease;
+									transform: rotate(0deg);
+								}
+							}
+							&.active {
+								> a {
+									&:after {
+										right: 26px;
+										transform: rotate(180deg);
+									}
+								}
+							}
+							> ul {
+								@media all and (min-width: 800px) {
+									display: block !important;
+								}
+								@media all and (max-width: 800px) {
+									display: none;
+								}
+							}
+						}
 						> a {
 							color: #efefef;
 							text-decoration: none;
