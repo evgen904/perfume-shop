@@ -5147,9 +5147,10 @@ a {
 				left: 0;
 				right: 0;
 				bottom: 0;
-				-moz-transition: all 0.6s ease-out;
-				-o-transition: all 0.6s ease-out;
-				-webkit-transition: all 0.6s ease-out;
+				// -moz-transition: all 0.6s ease-out;
+				// -o-transition: all 0.6s ease-out;
+				// -webkit-transition: all 0.6s ease-out;
+				background: none !important;
 			}
 			> .block-folder-text {
 				@media all and (min-width: 640px) {
@@ -5226,9 +5227,9 @@ a {
 			}
 			&:hover {
 				.block-folder-img {
-					-webkit-transform: scale(1.1);
-					-moz-transform: scale(1.1);
-					-o-transform: scale(1.1);
+					// -webkit-transform: scale(1.1);
+					// -moz-transform: scale(1.1);
+					// -o-transform: scale(1.1);
 				}
 				> .block-folder-text {
 					transition-delay: .3s;
