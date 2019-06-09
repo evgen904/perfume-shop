@@ -282,6 +282,9 @@ a {
 			.site-header-in-right .cart-top {
 				min-width: 34px;
 				padding-top: 5px;
+				@media all and (max-width: 800px) {
+					padding-top: 14px;
+				}
 			}
 			.site-header-in-right .cart-top .cart-top-amount {
 				margin-right: 0;
@@ -376,7 +379,7 @@ a {
 			.search.active .search-open {
 				width: 78px;
 				@media all and (max-width: 800px) {
-					background: url('../images/ico-search-2.svg') 0 0 no-repeat;
+					background: url('../images/ico-search-top.png') 0 0 no-repeat;
 					cursor: pointer;
 					position: absolute;
 					top: -37px;
@@ -385,6 +388,9 @@ a {
 					height: 22px;
 					&:after, &:before {
 						display: none;
+					}
+					&:hover {
+						background: url('../images/ico-search-top-hover.png') 0 0 no-repeat;
 					}
 				}
 			}
@@ -459,6 +465,8 @@ a {
 								left: 50%;
 								margin-left: -10px;
 								top: 41px;
+								width: 13px;
+								height: 2px;
 							}
 							&:after, &:before {
 								content: '';
@@ -468,12 +476,22 @@ a {
 								width: 19px;
 								height: 3px;
 								background-color: #202121;
+								@media all and (max-width: 800px) {
+									width: 16px;
+									height: 2px;
+								}
 							}
 							&:after {
 								top: -5px;
+								@media all and (max-width: 800px) {
+									top: -6px;
+								}
 							}
 							&:before {
 								bottom: -5px;
+								@media all and (max-width: 800px) {
+									bottom: -6px;
+								}
 							}
 						}
 						@media all and (max-width: 800px) {
@@ -1233,6 +1251,9 @@ a {
 			display: flex;
 			justify-content: flex-end;
 			.authorization-top {
+				@media all and (max-width: 800px) {
+					display: none;
+				}
 				margin-top: 4px;
 				a {
 					display: inline-block;
@@ -1267,11 +1288,11 @@ a {
 		}
 		&-open {
 			width: 21px;
-			height: 17px;
-			background: url('../images/ico-search-2.svg') 0 0 no-repeat;
+			height: 21px;
+			background: url('../images/ico-search-top.png') 0 0 no-repeat;
 			cursor: pointer;
 			position: absolute;
-			top: 26px;
+			top: 24px;
 			right: 125px;
 			@media all and (max-width: 1280px) {
 				right: 155px;
@@ -1282,7 +1303,13 @@ a {
 				border-left: 1px solid #ebeeee;
 				top: 0;
 				right: 0;
-				background: url('../images/ico-search-2.svg') 50% 50% no-repeat;
+				background: url('../images/ico-search-top.png') 50% 50% no-repeat;
+				&:hover {
+					background: url('../images/ico-search-top-hover.png') 50% 50% no-repeat;
+				}
+			}
+			&:hover {
+				background: url('../images/ico-search-top-hover.png') 0 0 no-repeat;
 			}
 		}
 		form {
@@ -1304,14 +1331,20 @@ a {
 				border: none;
 				width: 20px;
 				height: 20px;
-				background: url('../images/ico-search-2.svg') 0 0 no-repeat;
+				background: url('../images/ico-search-top.png') 0 0 no-repeat;
+				&:hover {
+					background: url('../images/ico-search-top-hover.png') 0 0 no-repeat;
+				}
 				@media all and (max-width: 800px) {
 					height: 62px;
 					width: 50px;
 					padding: 0;
 					margin: 0;
-					background: url('../images/ico-search-2.svg') 50% 50% no-repeat;
+					background: url('../images/ico-search-top.png') 50% 50% no-repeat;
 					order: 2;
+					&:hover {
+						background: url('../images/ico-search-top-hover.png') 50% 50% no-repeat;
+					}
 				}
 			}
 			input[type="text"] {
@@ -2092,17 +2125,24 @@ a {
 	.block-filtrs-title {
 		display: none;
 		margin: 0 0 10px;
-		color: #fff;
+		color: #000000;
 		font-size: 15px;
 		text-transform: uppercase;
 		padding: 15px 20px 6px 54px;
 		height: 48px;
 		position: relative;
 		font-weight: bold;
-		background: #202121;
+		border: 1px solid #ebeeee;
+		box-shadow: 2px 2px 0 rgba(95, 95, 95, 0.14);
+		background: #fff;
 		&.active {
+			border: 1px solid #202121;
+			box-shadow: 2px 2px 0 rgba(95, 95, 95, 0.14);
+			background: #202121;
+			color: #fff;
+			transition: all 0.3s ease;
 			&:after {
-				transform: rotate(180deg);
+				background: url('../images/ico-filters.png') 0 0 no-repeat;
 			}
 		}
 		&:after {
@@ -2113,7 +2153,7 @@ a {
 			left: 21px;
 			width: 18px;
 			height: 18px;
-			background: url('../images/ico-filters.png') 0 0 no-repeat;
+			background: url('../images/ico-filters-black.png') 0 0 no-repeat;
 		}
 		@media all and (max-width: 800px) {
 			display: block;
@@ -4024,6 +4064,7 @@ a {
 						text-decoration: underline;
 						font-size: 9px;
 						line-height: 22px;
+						text-transform: uppercase;
 						&:hover {
 							text-decoration: none;
 						}
