@@ -5151,6 +5151,13 @@ a {
 				// -o-transition: all 0.6s ease-out;
 				// -webkit-transition: all 0.6s ease-out;
 				background: none !important;
+				> div {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+				}
 			}
 			> .block-folder-text {
 				@media all and (min-width: 640px) {
@@ -7128,3 +7135,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 	opacity: 1;
 }
 /* animation */
+
+
+
